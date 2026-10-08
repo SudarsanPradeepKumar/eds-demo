@@ -1,20 +1,124 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--frescopa-color-background);
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.04em;
 }
 
 footer .footer > div {
   margin: auto;
-  max-width: 1200px;
+  max-width: var(--site-width);
   padding: 40px 24px 24px;
 }
 
+footer .footer .section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer .footer h6 {
+  margin: 0.8em 0 0.25em;
+  font-family: var(--body-font-family);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+}
+
+footer .footer .default-content-wrapper h6 {
+  margin-top: 0;
+}
+
+footer .footer p,
+footer .footer li {
+  margin: 0 0 10px;
+  color: var(--frescopa-color-text);
+  font-size: 13px;
+  text-decoration: none;
+}
+
 footer .footer p {
-  margin: 0;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+footer .footer p:first-child:has(> a > img) {
+  width: 200px;
+  margin-bottom: 0;
+}
+
+footer .footer p > a > img {
+  width: 150px;
+  height: auto;
+}
+
+footer .footer p > a:has(> img):hover {
+  text-decoration-color: transparent;
+}
+
+footer .footer a:any-link {
+  color: var(--frescopa-color-text);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+footer .footer li a:any-link {
+  font-weight: 300;
+  text-decoration: none;
+}
+
+footer .footer li a:hover {
+  text-decoration: underline;
+  text-decoration-color: currentcolor;
+}
+
+footer .footer ul {
+  margin: 0.5em 0 1.5625em;
+  padding: 0;
+  list-style-type: none;
+}
+
+footer .footer .columns > div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footer .columns div {
+  min-width: max-content;
+  margin-bottom: 20px;
+  vertical-align: top;
+}
+
+footer .footer .section:last-child > .default-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 40px 32px 10px;
+  }
+
+  footer .footer .section {
+    flex-direction: row;
+  }
+
+  footer .footer .columns > div {
+    flex-direction: row;
+    align-items: start;
+    gap: 80px;
+  }
+
+  footer .footer .columns > div > div {
+    flex: 1;
+  }
+
+  footer .footer p > a > img {
+    width: 200px;
   }
 }

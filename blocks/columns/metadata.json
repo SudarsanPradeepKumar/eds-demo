@@ -1,0 +1,30 @@
+{
+  "variantName": "columns",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasBackgroundImage": false,
+    "hasGrid": false,
+    "imagePattern": "large",
+    "structure": "heading + text + image",
+    "purpose": "Side-by-side media and text columns (image beside heading + body copy)"
+  },
+  "contentPattern": {
+    "structure": "one row; each cell is a column (image cell and text cell with heading, text, optional CTA)"
+  },
+  "usage": {
+    "pagesUsing": [
+      "/subscription"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-08T00:22:05.819953Z"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_5c319c28d150",
+    "v_3c1ace58f2fc",
+    "v_37f85e469dae"
+  ]
+}

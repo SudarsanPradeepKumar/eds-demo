@@ -1,0 +1,98 @@
+/* video: structural layout only (brand styling applied by the design pass) */
+.video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* reserve 16:9 space before the player loads to avoid layout shift */
+.video[data-embed-loaded='false']:not(.video-has-placeholder) {
+  aspect-ratio: 16 / 9;
+}
+
+.video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.video .video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.video .video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* poster / click-to-play placeholder */
+.video .video-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+}
+
+.video .video-placeholder > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.video .video-placeholder picture img,
+.video > picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video .video-placeholder-play button {
+  position: relative;
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  outline: 2px solid;
+  padding: 0;
+  cursor: pointer;
+}
+
+.video .video-placeholder-play button::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 0;
+  height: 24px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid;
+  top: 50%;
+  left: calc(50% + 2px);
+  transform: translate(-50%, -50%);
+}
+
+.video .video-placeholder-play button:focus-visible {
+  outline-offset: 2px;
+}
+
+.video .video-caption {
+  padding-top: 16px;
+}
+
+@media (width >= 900px) {
+  .video .video-placeholder-play button {
+    width: 88px;
+    height: 88px;
+  }
+}

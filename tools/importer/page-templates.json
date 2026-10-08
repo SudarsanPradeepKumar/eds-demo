@@ -1,0 +1,532 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "landing-page",
+      "urls": [
+        "https://frescopa.coffee/",
+        "https://frescopa.coffee/business",
+        "https://frescopa.coffee/coffee",
+        "https://frescopa.coffee/content/frescopa/es/",
+        "https://frescopa.coffee/en/",
+        "https://frescopa.coffee/en/coffee",
+        "https://frescopa.coffee/en/subscription",
+        "https://frescopa.coffee/es/",
+        "https://frescopa.coffee/es/business",
+        "https://frescopa.coffee/es/coffee",
+        "https://frescopa.coffee/es/subscription",
+        "https://frescopa.coffee/experiments/value-prop-headline-test/challenger-1",
+        "https://frescopa.coffee/fr/",
+        "https://frescopa.coffee/fr/business",
+        "https://frescopa.coffee/fr/coffee",
+        "https://frescopa.coffee/fr/subscription",
+        "https://frescopa.coffee/jp/",
+        "https://frescopa.coffee/jp/business",
+        "https://frescopa.coffee/jp/coffee",
+        "https://frescopa.coffee/jp/subscription",
+        "https://frescopa.coffee/subscription",
+        "https://frescopa.coffee/sustainability"
+      ],
+      "coverageGaps": [],
+      "description": "Marketing landing page: full-width teaser hero, promotional offer section, embedded store locator and card grid sections",
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": [
+            ".teaser-container .teaser.block"
+          ]
+        },
+        {
+          "name": "hero-banner",
+          "instances": [
+            ".offer-container .offer.block",
+            ".reward-container .reward.block"
+          ]
+        },
+        {
+          "name": "embed",
+          "instances": [
+            ".store-locator-container .store-locator.block"
+          ]
+        },
+        {
+          "name": "cards",
+          "instances": [
+            ".card-tiles.cards-container .cards.block",
+            ".background.cards-container .cards.block"
+          ]
+        },
+        {
+          "name": "cards-feature",
+          "instances": [
+            ".home.cards-container .cards.block"
+          ]
+        },
+        {
+          "name": "cards-numbered",
+          "instances": [
+            ".numbered.cards-container .cards.block"
+          ]
+        },
+        {
+          "name": "video",
+          "instances": [
+            ".dm-video-container .dm-video.block"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "1",
+          "name": "quiz-teaser",
+          "selector": [
+            "div.section.teaser-container:not(.numbered):not(.blog)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "2",
+          "name": "subscription-offer",
+          "selector": [
+            "div.section.offer-container"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "3",
+          "name": "store-locator",
+          "selector": [
+            "div.section.store-locator-container"
+          ],
+          "style": null,
+          "blocks": [
+            "embed"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "4",
+          "name": "top-sellers",
+          "selector": [
+            "div.section.background.cards-container"
+          ],
+          "style": "background",
+          "blocks": [
+            "cards"
+          ],
+          "defaultContent": [
+            ".background.cards-container > .default-content-wrapper"
+          ]
+        },
+        {
+          "id": "5",
+          "name": "product-tiles",
+          "selector": [
+            "div.section.card-tiles.cards-container"
+          ],
+          "style": null,
+          "blocks": [
+            "cards"
+          ],
+          "defaultContent": [
+            ".card-tiles.cards-container > .default-content-wrapper"
+          ]
+        },
+        {
+          "id": "6",
+          "name": "feature-cards",
+          "selector": [
+            "div.section.home.cards-container"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "7",
+          "name": "rewards-banner",
+          "selector": [
+            "div.section.reward-container"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "8",
+          "name": "numbered-teaser",
+          "selector": [
+            "div.section.numbered.teaser-container"
+          ],
+          "style": "numbered",
+          "blocks": [
+            "hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "9",
+          "name": "blog-teaser",
+          "selector": [
+            "div.section.blog.teaser-container"
+          ],
+          "style": "blog",
+          "blocks": [
+            "hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "10",
+          "name": "numbered-steps",
+          "selector": [
+            "div.section.numbered.cards-container"
+          ],
+          "style": "numbered",
+          "blocks": [
+            "cards-numbered"
+          ],
+          "defaultContent": [
+            ".numbered.cards-container > .default-content-wrapper"
+          ]
+        },
+        {
+          "id": "11",
+          "name": "numbered-video",
+          "selector": [
+            "div.section.numbered.dm-video-container"
+          ],
+          "style": "numbered",
+          "blocks": [
+            "video"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "simple-content-page",
+      "urls": [
+        "https://frescopa.coffee/about-us",
+        "https://frescopa.coffee/content/forms/af/frescopa/enquire",
+        "https://frescopa.coffee/en/drafts/jalagari/signup",
+        "https://frescopa.coffee/en/locations",
+        "https://frescopa.coffee/en/products",
+        "https://frescopa.coffee/es/locations",
+        "https://frescopa.coffee/es/products",
+        "https://frescopa.coffee/fr/locations",
+        "https://frescopa.coffee/fr/products",
+        "https://frescopa.coffee/jp/locations",
+        "https://frescopa.coffee/jp/products"
+      ],
+      "coverageGaps": [],
+      "description": "Single-section page of default content (headings, paragraphs, lists) or an app shell that renders its main content client-side",
+      "blocks": []
+    },
+    {
+      "name": "product-listing",
+      "urls": [
+        "https://frescopa.coffee/accessories",
+        "https://frescopa.coffee/en/tea",
+        "https://frescopa.coffee/es/accessories",
+        "https://frescopa.coffee/es/tea",
+        "https://frescopa.coffee/fr/accessories",
+        "https://frescopa.coffee/fr/tea",
+        "https://frescopa.coffee/jp/accessories",
+        "https://frescopa.coffee/jp/tea"
+      ],
+      "coverageGaps": [],
+      "description": "Teaser hero banner followed by a multi-column product grid listing",
+      "blocks": []
+    },
+    {
+      "name": "teaser-form-page",
+      "urls": [
+        "https://frescopa.coffee/contact-us",
+        "https://frescopa.coffee/en/drafts/jalagari/machines",
+        "https://frescopa.coffee/en/machines",
+        "https://frescopa.coffee/es/contact-us",
+        "https://frescopa.coffee/es/machines",
+        "https://frescopa.coffee/es/sustainability",
+        "https://frescopa.coffee/fr/contact-us",
+        "https://frescopa.coffee/fr/machines",
+        "https://frescopa.coffee/fr/sustainability",
+        "https://frescopa.coffee/jp/contact-us",
+        "https://frescopa.coffee/jp/machines",
+        "https://frescopa.coffee/jp/sustainability",
+        "https://frescopa.coffee/machines",
+        "https://frescopa.coffee/variations/machines"
+      ],
+      "coverageGaps": [],
+      "description": "Teaser header followed by a content or product grid, embedded adaptive form section and sticky call-to-action bar",
+      "blocks": []
+    },
+    {
+      "name": "article-fragment",
+      "urls": [
+        "https://frescopa.coffee/content/dam/frescopa/en/articles/discovering-the-artofpourovercoffee",
+        "https://frescopa.coffee/content/dam/frescopa/en/articles/the-art-of-latteart",
+        "https://frescopa.coffee/content/dam/frescopa/en/articles/the-magic-of-espresso"
+      ],
+      "coverageGaps": [],
+      "description": "Headless content-fragment URL that renders only the global header and footer with an empty main area",
+      "blocks": []
+    },
+    {
+      "name": "offer-fragment",
+      "urls": [
+        "https://frescopa.coffee/content/dam/frescopa/en/offers/fall-in-love-my-barista-subscription"
+      ],
+      "coverageGaps": [],
+      "description": "Single headless offer content-fragment URL rendering only the global header and footer with an empty main area",
+      "blocks": []
+    },
+    {
+      "name": "quiz-option-fragment",
+      "urls": [
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/1-cup",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/2-cups",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/3-4-cups",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/5-cups",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/beach",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/cabin",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/coffee-pods",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/coffee-profile",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/country",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/cups-a-day",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/drip-machine",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/espresso-machine",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/feel-type",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/flavour-profile",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/flavour-type",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/french-press",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/location",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/making-coffee",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/moka-pot",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/pour-over",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/roast-type",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/rustic",
+        "https://frescopa.coffee/content/dam/frescopa/en/quiz/taste-type"
+      ],
+      "coverageGaps": [],
+      "description": "Headless quiz-option content-fragment URLs rendering only the global header and footer with an empty main area",
+      "blocks": []
+    },
+    {
+      "name": "locale-root-en",
+      "urls": [
+        "https://frescopa.coffee/en"
+      ],
+      "coverageGaps": [],
+      "description": "Bare locale root URL without trailing slash that renders an empty main area between header and footer",
+      "blocks": []
+    },
+    {
+      "name": "signup-form-locator",
+      "urls": [
+        "https://frescopa.coffee/en/drafts/jalagari/signup1",
+        "https://frescopa.coffee/jp/signup"
+      ],
+      "coverageGaps": [],
+      "description": "Two-section page: columns layout with signup form next to an image, followed by a store locator block",
+      "blocks": []
+    },
+    {
+      "name": "location-list",
+      "urls": [
+        "https://frescopa.coffee/en/locations/locationslist",
+        "https://frescopa.coffee/locations/locationlist"
+      ],
+      "coverageGaps": [],
+      "description": "Location list page whose main content is rendered client-side, leaving an empty server-rendered main area",
+      "blocks": []
+    },
+    {
+      "name": "product-detail-shell",
+      "urls": [
+        "https://frescopa.coffee/en/products/default",
+        "https://frescopa.coffee/es/products/default"
+      ],
+      "coverageGaps": [],
+      "description": "Default product detail page shell with no static sections; product content is rendered at runtime",
+      "blocks": []
+    },
+    {
+      "name": "locale-root-es",
+      "urls": [
+        "https://frescopa.coffee/es"
+      ],
+      "coverageGaps": [],
+      "description": "Bare locale root URL without trailing slash that renders an empty main area between header and footer",
+      "blocks": []
+    },
+    {
+      "name": "footer-fragment",
+      "urls": [
+        "https://frescopa.coffee/es/footer",
+        "https://frescopa.coffee/footer",
+        "https://frescopa.coffee/jp/footer"
+      ],
+      "coverageGaps": [],
+      "description": "Footer fragment document: columns section with brand info and five link lists, followed by a legal links row",
+      "blocks": []
+    },
+    {
+      "name": "nav-fragment",
+      "urls": [
+        "https://frescopa.coffee/es/nav",
+        "https://frescopa.coffee/fr/nav",
+        "https://frescopa.coffee/jp/nav",
+        "https://frescopa.coffee/nav"
+      ],
+      "coverageGaps": [],
+      "description": "Navigation fragment document: brand section, top-level menu list and utility link sections",
+      "blocks": []
+    },
+    {
+      "name": "placeholders-sheet-es",
+      "urls": [
+        "https://frescopa.coffee/es/placeholders"
+      ],
+      "coverageGaps": [],
+      "description": "Placeholder spreadsheet URL that renders no authored main content",
+      "blocks": []
+    },
+    {
+      "name": "product-metadata-sheet",
+      "urls": [
+        "https://frescopa.coffee/es/products/default/metadata"
+      ],
+      "coverageGaps": [],
+      "description": "Product metadata spreadsheet URL that renders no authored main content",
+      "blocks": []
+    },
+    {
+      "name": "quiz-page",
+      "urls": [
+        "https://frescopa.coffee/es/quiz",
+        "https://frescopa.coffee/fr/quiz",
+        "https://frescopa.coffee/jp/quiz",
+        "https://frescopa.coffee/quiz",
+        "https://frescopa.coffee/variations/subscription-var1"
+      ],
+      "coverageGaps": [],
+      "description": "Teaser header followed by an interactive multi-step quiz block with image option tiles",
+      "blocks": []
+    },
+    {
+      "name": "search-page-es",
+      "urls": [
+        "https://frescopa.coffee/es/search"
+      ],
+      "coverageGaps": [],
+      "description": "Search results page whose results render client-side, leaving an empty server-rendered main area",
+      "blocks": []
+    },
+    {
+      "name": "signup-page",
+      "urls": [
+        "https://frescopa.coffee/es/signup",
+        "https://frescopa.coffee/fr/signup"
+      ],
+      "coverageGaps": [],
+      "description": "Two-section page: columns layout with signup form and image, followed by a store locator block",
+      "blocks": []
+    },
+    {
+      "name": "locale-root-fr",
+      "urls": [
+        "https://frescopa.coffee/fr"
+      ],
+      "coverageGaps": [],
+      "description": "Bare locale root URL without trailing slash that renders an empty main area between header and footer",
+      "blocks": []
+    },
+    {
+      "name": "footer-fragment-fr",
+      "urls": [
+        "https://frescopa.coffee/fr/footer"
+      ],
+      "coverageGaps": [],
+      "description": "Footer fragment document variant: columns section with link lists and a secondary legal links section",
+      "blocks": []
+    },
+    {
+      "name": "placeholders-sheet-fr",
+      "urls": [
+        "https://frescopa.coffee/fr/placeholders"
+      ],
+      "coverageGaps": [],
+      "description": "Placeholder spreadsheet URL that renders no authored main content",
+      "blocks": []
+    },
+    {
+      "name": "search-page-fr",
+      "urls": [
+        "https://frescopa.coffee/fr/search"
+      ],
+      "coverageGaps": [],
+      "description": "Search results page whose results render client-side, leaving an empty server-rendered main area",
+      "blocks": []
+    },
+    {
+      "name": "locale-root-jp",
+      "urls": [
+        "https://frescopa.coffee/jp"
+      ],
+      "coverageGaps": [],
+      "description": "Bare locale root URL without trailing slash that renders an empty main area between header and footer",
+      "blocks": []
+    },
+    {
+      "name": "placeholders-sheet-jp",
+      "urls": [
+        "https://frescopa.coffee/jp/placeholders"
+      ],
+      "coverageGaps": [],
+      "description": "Placeholder spreadsheet URL that renders no authored main content",
+      "blocks": []
+    },
+    {
+      "name": "search-page-jp",
+      "urls": [
+        "https://frescopa.coffee/jp/search"
+      ],
+      "coverageGaps": [],
+      "description": "Search results page whose results render client-side, leaving an empty server-rendered main area",
+      "blocks": []
+    },
+    {
+      "name": "store-locator",
+      "urls": [
+        "https://frescopa.coffee/locations"
+      ],
+      "coverageGaps": [],
+      "description": "Intro default content followed by a two-column store locator with map embed and location list",
+      "blocks": []
+    },
+    {
+      "name": "search-page",
+      "urls": [
+        "https://frescopa.coffee/search"
+      ],
+      "coverageGaps": [],
+      "description": "Search results page whose results render client-side, leaving an empty server-rendered main area",
+      "blocks": []
+    }
+  ]
+}

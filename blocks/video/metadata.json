@@ -1,0 +1,29 @@
+{
+  "variantName": "video",
+  "baseBlock": "video",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "hasBackgroundImage": false,
+    "hasGrid": false,
+    "imagePattern": "large",
+    "structure": "9 CTAs + 3 images + list",
+    "purpose": "Full content-width 16:9 video player with an optional poster image used as a click-to-play placeholder"
+  },
+  "contentPattern": {
+    "structure": "one row; optional poster picture plus a link to the video (MP4/WebM URL, YouTube, Vimeo, or a player page such as an AEM Dynamic Media /play URL, embedded as a 16:9 iframe); optional caption text"
+  },
+  "usage": {
+    "pagesUsing": [
+      "/sustainability"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-08T00:26:22.000Z"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_bf799425813b",
+    "v_d8c22ebce937-1"
+  ]
+}

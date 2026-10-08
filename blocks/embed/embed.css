@@ -1,0 +1,216 @@
+/* embed: generic third-party embeds (maps, videos, social posts, iframes) */
+.embed {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+.embed .embed-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.embed .embed-media iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed.embed-twitter .embed-media {
+  aspect-ratio: auto;
+}
+
+.embed.embed-twitter .twitter-tweet-rendered {
+  margin-inline: auto;
+}
+
+/* click-to-load placeholder */
+.embed .embed-placeholder {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+
+.embed .embed-placeholder > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.embed .embed-placeholder picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.embed .embed-placeholder-play button {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(3);
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 0;
+}
+
+.embed .embed-placeholder-play button::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid;
+  top: 4px;
+  left: 7px;
+}
+
+/*
+ * Side-panel variant (authored text + embed), e.g. the store locator:
+ * orange panel with heading, uppercase label and a pill search form; map fills the rest.
+ * Mobile: map on top, panel below.
+ */
+.embed.embed-has-content {
+  flex-direction: column-reverse;
+  background-color: var(--frescopa-color-secondary);
+}
+
+.embed.embed-has-content .embed-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  background-color: rgb(224 86 51);
+  opacity: 0.8;
+}
+
+.embed.embed-has-content .embed-media {
+  aspect-ratio: auto;
+  height: 425px;
+}
+
+.embed.embed-has-content .embed-content h1,
+.embed.embed-has-content .embed-content h2,
+.embed.embed-has-content .embed-content h3,
+.embed.embed-has-content .embed-content h4,
+.embed.embed-has-content .embed-content h5,
+.embed.embed-has-content .embed-content h6 {
+  max-width: 265px;
+  margin: 0 0 20px;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-size-m);
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.embed.embed-has-content .embed-content p {
+  margin: 10px 0 5px;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+/* pill search form: input with the submit button tucked inside its right edge */
+.embed.embed-has-content .embed-search {
+  display: flex;
+  align-items: center;
+  max-width: none;
+  margin: 0;
+}
+
+.embed.embed-has-content .embed-search input {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 206px;
+  height: 56px;
+  margin: 0;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  padding: 1px 2px 1px 20px;
+  background-color: transparent;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.01px;
+  appearance: none;
+}
+
+.embed.embed-has-content .embed-search input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.embed.embed-has-content .embed-search input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.embed.embed-has-content .embed-search button {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 100px;
+  height: 50px;
+  margin: 0 0 0 -104px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  padding: 1px 6px;
+  background-color: #fff;
+  color: var(--frescopa-color-text);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.embed.embed-has-content .embed-search button:hover,
+.embed.embed-has-content .embed-search button:focus-visible {
+  background-color: var(--frescopa-color-text);
+  color: #fff;
+}
+
+@media (width >= 900px) {
+  .embed.embed-has-content {
+    flex-direction: row;
+    align-items: stretch;
+    max-height: 450px;
+    margin-bottom: 60px;
+    border-radius: 12px;
+  }
+
+  .embed.embed-has-content .embed-content {
+    flex: 0 0 480px;
+    padding: 0 0 0 80px;
+  }
+
+  .embed.embed-has-content .embed-content p {
+    margin: 5px 0;
+  }
+
+  .embed.embed-has-content .embed-media {
+    flex: 1 1 auto;
+    width: auto;
+    height: auto;
+    min-height: 320px;
+  }
+}

@@ -1,0 +1,84 @@
+/* cards-feature: large white shadowed cards, photo on top; 1 column mobile / 2 columns desktop.
+   Values extracted from https://frescopa.coffee/ (.home .cards). */
+.cards-feature > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cards-feature .cards-feature-card {
+  display: block;
+  margin: 0;
+  width: 100%;
+  border-radius: 12px;
+  background-color: var(--background-color);
+  box-shadow: 0 10px 20px 0 rgb(0 0 0 / 12%);
+}
+
+.cards-feature .cards-feature-card-image {
+  line-height: 0;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.cards-feature .cards-feature-card-image picture {
+  display: block;
+}
+
+.cards-feature .cards-feature-card-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 360px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* margins (not padding) so heading/CTA margins collapse into them, as on the source */
+.cards-feature .cards-feature-card-body {
+  margin: 30px 30px 34px;
+}
+
+.cards-feature .cards-feature-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-feature .cards-feature-card-body p {
+  margin: 10px 0;
+}
+
+/* CTA: plain teal pill, sits directly under the copy (not pinned to the card bottom) */
+.cards-feature .cards-feature-card-actions p {
+  margin: 10px 0;
+}
+
+main .cards-feature a.button:any-link {
+  display: inline-block;
+  margin: 16px 0;
+  border: 2px solid transparent;
+  border-radius: var(--radius-button);
+  padding: 8px 19.2px;
+  background-color: var(--frescopa-color-primary);
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .cards-feature > ul {
+    flex-direction: row;
+  }
+
+  .cards-feature .cards-feature-card-body {
+    margin: 30px 40px 34px;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "variantName": "cards-numbered",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "structure": "vertical list of wide rows; photo on one side and text on the other, alternating sides every row",
+    "columns": 2,
+    "imageTreatment": "rounded-corner photo ~50% width",
+    "numbering": "large faint step number (1..n) behind the text, generated with CSS counters (not authored)",
+    "density": "spacious",
+    "colorScheme": "light",
+    "purpose": "Numbered process/steps list (e.g. sustainability focus areas, subscription steps)"
+  },
+  "contentPattern": {
+    "structure": "one row per step; cell 1 = image, cell 2 = heading + paragraph(s), optional subheadings, lists and link. Step numbers and alternating image side come from CSS; authors never number or swap cells."
+  },
+  "usage": {
+    "pagesUsing": [
+      "/sustainability",
+      "/subscription"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-10-08T00:00:00Z"
+  },
+  "options": [],
+  "memberVariantIds": []
+}

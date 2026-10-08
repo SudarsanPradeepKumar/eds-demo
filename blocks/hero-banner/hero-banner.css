@@ -1,0 +1,197 @@
+/*
+ * hero-banner: rounded promo banner, text left / CTA right.
+ * Values extracted from https://frescopa.coffee/ (.offer and .reward blocks).
+ * Default = beige subscription offer; `dark` = teal rewards banner with ribbon.
+ */
+.hero-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  background-color: var(--frescopa-color-background);
+  color: var(--text-color);
+}
+
+/* optional authored background image */
+.hero-banner .hero-banner-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  line-height: 0;
+}
+
+.hero-banner .hero-banner-background picture,
+.hero-banner .hero-banner-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-banner .hero-banner-background img {
+  object-fit: cover;
+}
+
+.hero-banner .hero-banner-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.hero-banner .hero-banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-width: 0;
+}
+
+.hero-banner .hero-banner-text h1,
+.hero-banner .hero-banner-text h2,
+.hero-banner .hero-banner-text h3,
+.hero-banner .hero-banner-text h4,
+.hero-banner .hero-banner-text h5,
+.hero-banner .hero-banner-text h6,
+.hero-banner .hero-banner-text p {
+  margin: 10px;
+}
+
+.hero-banner .hero-banner-text h4 {
+  font-size: var(--heading-size-m);
+  line-height: 32px;
+}
+
+.hero-banner .hero-banner-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-banner .hero-banner-actions p {
+  margin: 0;
+}
+
+/* CTA: rust pill (source uses .button.secondary) */
+main .hero-banner .hero-banner-actions a.button:any-link {
+  display: flex;
+  width: 100%;
+  margin: 16px 0;
+  border: 3px solid var(--frescopa-color-button-secondary);
+  border-radius: var(--radius-button);
+  padding: 8px 19.2px;
+  background-color: var(--frescopa-color-button-secondary);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 1.28px;
+}
+
+main .hero-banner .hero-banner-actions a.button:hover {
+  color: #383838;
+}
+
+/* dark: teal rewards banner with yellow gift ribbon */
+.hero-banner.dark {
+  /* mobile: ribbon bow at native size, ribbon line continued with a stripe */
+  background:
+    url('https://frescopa.coffee/styles/backgrounds/reward-banner-v1.svg') no-repeat -170px 0 / 1360px 180px,
+    linear-gradient(to right, transparent 39px, #fad25a 39px, #fad25a 51px, transparent 51px),
+    var(--frescopa-color-primary);
+  color: #fff;
+}
+
+.hero-banner.dark .hero-banner-text {
+  gap: 10px;
+  padding-left: 80px;
+  color: #fff;
+}
+
+.hero-banner.dark .hero-banner-text h1,
+.hero-banner.dark .hero-banner-text h2,
+.hero-banner.dark .hero-banner-text h3,
+.hero-banner.dark .hero-banner-text h4,
+.hero-banner.dark .hero-banner-text h5,
+.hero-banner.dark .hero-banner-text h6 {
+  margin: 25.6px 0 8px;
+  color: inherit;
+  font-family: var(--heading-font-family);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 1.28px;
+}
+
+.hero-banner.dark .hero-banner-text p {
+  margin: 0;
+  color: inherit;
+}
+
+@media (width >= 900px) {
+  .hero-banner {
+    background:
+      url('https://frescopa.coffee/styles/backgrounds/small.svg') no-repeat center center / cover,
+      var(--frescopa-color-background);
+  }
+
+  .hero-banner .hero-banner-content {
+    flex-direction: row;
+    gap: 120px;
+    padding: 50px 15% 50px 25%;
+  }
+
+  .hero-banner .hero-banner-text {
+    flex: 0 1 auto;
+  }
+
+  .hero-banner .hero-banner-text h1,
+  .hero-banner .hero-banner-text h2,
+  .hero-banner .hero-banner-text h3,
+  .hero-banner .hero-banner-text h4,
+  .hero-banner .hero-banner-text h5,
+  .hero-banner .hero-banner-text h6,
+  .hero-banner .hero-banner-text p {
+    margin: 0;
+  }
+
+  .hero-banner .hero-banner-actions {
+    flex: none;
+  }
+
+  main .hero-banner .hero-banner-actions a.button:any-link {
+    display: inline-flex;
+    width: auto;
+  }
+
+  .hero-banner.dark {
+    background:
+      url('https://frescopa.coffee/styles/backgrounds/reward-banner-v1.svg') no-repeat 15% 0 / cover,
+      var(--frescopa-color-primary);
+  }
+
+  .hero-banner.dark .hero-banner-content {
+    justify-content: space-around;
+    gap: 0;
+    padding: 20px;
+  }
+
+  .hero-banner.dark .hero-banner-text {
+    box-sizing: content-box;
+    width: 50%;
+    padding: 10px 0 28px 252px;
+  }
+
+  .hero-banner.dark .hero-banner-text h1,
+  .hero-banner.dark .hero-banner-text h2,
+  .hero-banner.dark .hero-banner-text h3,
+  .hero-banner.dark .hero-banner-text h4,
+  .hero-banner.dark .hero-banner-text h5,
+  .hero-banner.dark .hero-banner-text h6 {
+    margin: 25.6px 0 8px;
+  }
+
+  .hero-banner.dark .hero-banner-text p {
+    margin: 10px 0 18px;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/experiments/value-prop-headline-test/challenger-1",
+  "path": "experiments/value-prop-headline-test/challenger-1",
+  "timestamp": "2026-10-08T01:09:22.091Z",
+  "title": "Subscription",
+  "template": "landing-page",
+  "blocks": [
+    "hero",
+    "cards-numbered"
+  ]
+}

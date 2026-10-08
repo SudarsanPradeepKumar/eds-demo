@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/business",
+  "path": "business",
+  "timestamp": "2026-10-08T01:08:43.003Z",
+  "title": "Business",
+  "template": "landing-page",
+  "blocks": [
+    "hero"
+  ]
+}

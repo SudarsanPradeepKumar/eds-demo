@@ -1,0 +1,14 @@
+{
+  "type": "da",
+  "sites": {
+    "eds-demo": {
+      "previewOrg": "SudarsanPradeepKumar",
+      "previewSite": "eds-demo",
+      "contentHostUrl": "https://content.da.live/sudarsanpradeepkumar/eds-demo/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  },
+  "features": [
+    "site-planning"
+  ]
+}

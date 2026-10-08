@@ -1,0 +1,33 @@
+{
+  "variantName": "embed",
+  "baseBlock": "embed",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "hasBackgroundImage": false,
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "heading + text + 1 CTAs",
+    "purpose": "Embedded third-party content (e.g. store-locator map) with an optional side panel holding a heading, eyebrow text and a postcode search"
+  },
+  "contentPattern": {
+    "structure": "one row; content cell (heading, text, optional search link whose URL ends in an empty query parameter, e.g. /locations?postcode=, link title = input placeholder) and an embed cell containing only the embed URL (map, YouTube, Vimeo, Twitter/X or any iframe-able URL; optional picture = click-to-load placeholder)"
+  },
+  "usage": {
+    "pagesUsing": [
+      "/index",
+      "/en/index",
+      "/coffee"
+    ],
+    "reuseCount": 3,
+    "lastUsed": "2026-10-08T01:20:30.740205Z"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_2acdaad1ece9-1",
+    "v_2acdaad1ece9-2",
+    "v_2acdaad1ece9",
+    "v_2acdaad1ece9-3"
+  ]
+}

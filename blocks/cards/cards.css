@@ -3,12 +3,15 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  /* auto-fit: a short row (e.g. 3 top sellers) fills the width instead of leaving empty tracks */
+  grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
   gap: 24px;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
   background-color: var(--background-color);
 }
 
@@ -22,6 +25,127 @@
 
 .cards > ul > li img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+/* product cards (non-compact): white cards with contained images, h5 name, price and pill CTA */
+.cards:not(.cards-compact) > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 40px 0 80px;
+}
+
+.cards:not(.cards-compact) > ul > li {
+  min-height: 410px;
+  padding-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+}
+
+.cards:not(.cards-compact) > ul > li img {
+  max-height: 256px;
+  object-fit: contain;
+}
+
+.cards:not(.cards-compact) .cards-card-body > h5 {
+  margin: 19.2px 0 6px;
+}
+
+.cards:not(.cards-compact) .cards-card-body > p {
+  margin: 0;
+}
+
+.cards:not(.cards-compact) .cards-card-body > p.cards-card-cta {
+  margin: 0 0 18px;
+}
+
+/* plain-link CTA rendered as the global teal pill button */
+main .cards:not(.cards-compact) .cards-card-cta a:any-link {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: var(--spacing-small) 0;
+  border: 2px solid transparent;
+  border-radius: var(--radius-button);
+  padding: 8px 19.2px;
+  background-color: var(--frescopa-color-primary);
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main .cards:not(.cards-compact) .cards-card-cta a:hover,
+main .cards:not(.cards-compact) .cards-card-cta a:focus-visible {
+  background-color: var(--frescopa-color-primary);
+  color: #fff;
+  text-decoration: none;
+}
+
+main .cards:not(.cards-compact) .cards-card-cta a:focus-visible {
+  outline: 2px solid var(--frescopa-color-tertiary);
+  outline-offset: 2px;
+}
+
+/* compact image + label tiles (set by JS when no card has copy) */
+.cards.cards-compact > ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin: 40px 0 80px;
+}
+
+.cards.cards-compact > ul > li {
+  margin: 16px 0;
+  padding-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 12%);
+  overflow: hidden;
+}
+
+.cards.cards-compact .cards-card-image {
+  min-width: 224px;
+}
+
+.cards.cards-compact > ul > li img {
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.cards.cards-compact .cards-card-body {
+  text-align: center;
+}
+
+@media (width >= 900px) {
+  /* product cards: one row, equal widths */
+  .cards:not(.cards-compact) > ul {
+    flex-direction: row;
+  }
+
+  .cards:not(.cards-compact) > ul > li {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  /* source tile row sits in a 1200px container */
+  .cards.cards-compact {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .cards.cards-compact > ul > li {
+    width: 224px;
+  }
 }

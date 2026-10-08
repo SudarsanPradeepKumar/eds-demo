@@ -1,0 +1,4 @@
+/* products render here once Commerce product discovery is connected */
+.product-list-page:empty {
+  display: none;
+}

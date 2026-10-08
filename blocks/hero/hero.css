@@ -1,37 +1,142 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
-}
-
+/*
+ * hero: contained rounded panel with a background illustration and a text
+ * column (eyebrow, heading, copy, CTA) on the left.
+ * Values extracted from frescopa.coffee .teaser.block computed styles.
+ */
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+
+  /* grow with long copy instead of clipping it (fixed height cut off text/CTA on mobile) */
+  min-height: 490px;
+  border-radius: 12px;
+  background-color: var(--frescopa-color-tertiary);
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
+.hero .hero-background {
   position: absolute;
-  z-index: -1;
   inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
 }
 
-.hero img {
-  object-fit: cover;
+.hero .hero-background picture,
+.hero .hero-background img {
+  display: block;
   width: 100%;
   height: 100%;
 }
 
+.hero .hero-background img {
+  object-fit: cover;
+}
+
+.hero .hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-sizing: content-box;
+
+  /* source .foreground: 540px content box + padding (not border-box) */
+  flex: 0 1 540px;
+  min-width: 0;
+  max-width: 540px;
+  padding: 70px 40px;
+
+  /* only splits a word that cannot fit the column (narrow mobile) */
+  overflow-wrap: break-word;
+}
+
+.hero .hero-content > * {
+  margin: 0;
+}
+
+.hero .hero-eyebrow {
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--frescopa-color-text);
+}
+
+.hero :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+.hero .hero-content > p:not(.hero-eyebrow) {
+  color: #fff;
+}
+
+/* description paragraphs (source .long-description p margins) */
+.hero .hero-content > :is(h1, h2, h3, h4, h5, h6) ~ p:not(.hero-eyebrow) {
+  margin: 0 0 18px;
+}
+
+.hero .hero-content > :is(h1, h2, h3, h4, h5, h6) + p:not(.hero-eyebrow) {
+  margin: 9px 0 28.125px;
+}
+
+/* "light" option: white eyebrow (source teaser default); "dark" keeps brown */
+.hero.light .hero-eyebrow {
+  color: #fff;
+}
+
+.hero.dark .hero-eyebrow {
+  color: var(--frescopa-color-text);
+}
+
+.hero .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+}
+
+.hero .hero-actions p {
+  margin: 0;
+}
+
+main .hero a.button:any-link {
+  display: inline-block;
+  margin: 16px 0;
+  border: 0;
+  color: #fff;
+}
+
 @media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
+  .hero-container .hero-wrapper {
+    padding: 0 32px;
   }
+
+  /* source .foreground is height:100% + 10px padding (510px in a 490px
+     block, overflow clipped), so the text centres 10px below the block's
+     middle; 30px/10px reproduces that centre while keeping a bottom gutter
+     when long copy makes the block grow */
+  .hero .hero-content {
+    justify-content: center;
+    padding: 30px 87px 10px;
+  }
+
+  .hero :is(h1, h2, h3, h4, h5, h6) {
+    font-size: var(--heading-size-xxl);
+    line-height: 56px;
+  }
+}
+
+/* half-height option: short banner (source teaser .half-height = 200px) */
+.hero.half-height {
+  min-height: 200px;
 }

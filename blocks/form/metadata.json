@@ -1,0 +1,24 @@
+{
+  "variantName": "form",
+  "baseBlock": "form",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "hasBackgroundImage": false,
+    "hasGrid": false,
+    "imagePattern": "large",
+    "structure": "heading + 4 CTAs + 3 images + list",
+    "purpose": "Single-column form (registration, contact details, machine/payment selection) with stacked labels, grouped fieldsets, consent checkbox and submit button"
+  },
+  "contentPattern": {
+    "structure": "either a link to a spreadsheet JSON form definition (columns Name, Type, Label, Placeholder, Value, Options, Mandatory, Fieldset) plus an optional submit-endpoint link, or one row per field: Label | Type (text, email, tel, password, textarea, select, checkbox, radio, fieldset, heading, plaintext, submit) | Placeholder or comma-separated Options | Required (yes/no); an optional leading single-cell row holds the heading/intro text"
+  },
+  "usage": {
+    "pagesUsing": [],
+    "reuseCount": 0,
+    "lastUsed": null
+  },
+  "options": [],
+  "memberVariantIds": ["v_b7c6460013da", "v_7dbdc853e656-1", "v_30c5c99cf72c-1", "v_7dbdc853e656-2", "v_199ef90a0c63", "v_29a32de28ca6", "v_9471e9c5104d"]
+}

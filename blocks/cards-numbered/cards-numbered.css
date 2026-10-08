@@ -1,0 +1,147 @@
+/* cards-numbered: vertical list of steps; photo + text side by side from 600px,
+   image side alternating per row; large faint CSS-counter number behind the text.
+   Values extracted from the source `.numbered .cards` step lists. */
+
+/* source wrapper: 40px padding (mobile) / 20px 90px (desktop). The section wrapper
+   already supplies 24px / 32px of side padding, so the block adds the remainder. */
+.cards-numbered {
+  padding: 40px 16px;
+}
+
+.cards-numbered > ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: cards-numbered-step;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cards-numbered .cards-numbered-step {
+  counter-increment: cards-numbered-step;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 16px;
+  border-radius: 5px;
+  background-color: var(--background-color);
+}
+
+.cards-numbered .cards-numbered-step-image {
+  width: 100%;
+  max-width: none;
+  border-radius: 20px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.cards-numbered .cards-numbered-step-image picture {
+  display: block;
+}
+
+.cards-numbered .cards-numbered-step-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.cards-numbered .cards-numbered-step-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: none;
+  margin: 16px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* step number, generated (never authored) */
+.cards-numbered .cards-numbered-step-body::before {
+  content: counter(cards-numbered-step);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--heading-font-family);
+  font-size: 300px;
+  line-height: 300px;
+  color: rgb(0 0 0 / 10%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.cards-numbered .cards-numbered-step-body :is(h2, h3) {
+  font-size: var(--heading-size-l);
+}
+
+.cards-numbered .cards-numbered-step-body p {
+  font-size: var(--body-font-size-m);
+}
+
+@media (width >= 600px) {
+  .cards-numbered .cards-numbered-step {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  /* alternate image side per row: even steps put the image on the right */
+  .cards-numbered .cards-numbered-step:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .cards-numbered .cards-numbered-step-image {
+    max-width: 400px;
+  }
+
+  .cards-numbered .cards-numbered-step-body {
+    max-width: 500px;
+    text-align: left;
+  }
+
+  .cards-numbered .cards-numbered-step-body::before {
+    font-size: 400px;
+    line-height: 400px;
+  }
+
+  /* text-only step keeps the column position of the text it would have had */
+  .cards-numbered .cards-numbered-step.no-image:nth-child(odd) {
+    justify-content: flex-end;
+  }
+}
+
+@media (width >= 900px) {
+  .cards-numbered {
+    padding: 20px 58px;
+  }
+
+  /* source content column is 1360 - 2 * 90 = 1180px */
+  .cards-numbered > ol {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .cards-numbered .cards-numbered-step {
+    gap: 80px;
+  }
+
+  .cards-numbered .cards-numbered-step-image {
+    max-width: 468px;
+  }
+
+  .cards-numbered .cards-numbered-step-body {
+    max-width: 600px;
+  }
+
+  .cards-numbered .cards-numbered-step-body :is(h2, h3) {
+    font-size: var(--heading-size-xl);
+    margin-top: 0;
+  }
+}

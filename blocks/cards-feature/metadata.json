@@ -1,0 +1,28 @@
+{
+  "variantName": "cards-feature",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "structure": "2-column grid of large feature cards",
+    "columns": 2,
+    "imageTreatment": "large photo on top of each card",
+    "density": "spacious",
+    "colorScheme": "light",
+    "purpose": "Large promotional feature cards, each with a photo, heading, short copy and a CTA button"
+  },
+  "contentPattern": {
+    "structure": "one row per card; cell 1 = image (optional), cell 2 = heading, paragraph(s) and a CTA link (pinned to the card bottom)"
+  },
+  "usage": {
+    "pagesUsing": [
+      "/index",
+      "/en/index"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-10-08T00:29:55.794981Z"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_02404e9410f6"
+  ]
+}

@@ -1,0 +1,109 @@
+/* form: structural layout only (brand styling applied by the design pass) */
+.form {
+  width: 100%;
+}
+
+.form .form-intro > :first-child {
+  margin-top: 0;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* fieldset groups (e.g. "Contact details", "Machine selection") */
+.form .form-fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.form .form-fieldset > legend {
+  padding: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* label stacked above control, control full width */
+.form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form .form-field input:not([type='checkbox'], [type='radio']),
+.form .form-field select,
+.form .form-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  font: inherit;
+}
+
+.form .form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form .form-field label[data-required]::after {
+  content: " *";
+}
+
+/* single checkbox / consent: control beside label */
+.form .form-checkbox-wrapper {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.form .form-checkbox-wrapper > input {
+  flex: 0 0 auto;
+  margin: 2px 0 0;
+}
+
+/* radio / multi-checkbox groups */
+.form .form-choice-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.form .form-choice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form .form-submit-wrapper {
+  flex-direction: row;
+}
+
+.form .form-heading-wrapper h3,
+.form .form-plaintext-wrapper p {
+  margin: 0;
+}
+
+.form .form-status {
+  margin-top: 16px;
+}
+
+@media (width >= 600px) {
+  .form .form-choice-group {
+    flex-flow: row wrap;
+    column-gap: 24px;
+  }
+}
+
+@media (width >= 900px) {
+  .form form {
+    max-width: 900px;
+  }
+}

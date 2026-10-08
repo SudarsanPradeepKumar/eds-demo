@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/jp/",
+  "path": "jp/index",
+  "timestamp": "2026-10-08T01:09:43.912Z",
+  "title": "Frescopa - コーヒー、紅茶、アクセサリー",
+  "template": "landing-page",
+  "blocks": [
+    "hero",
+    "hero-banner",
+    "hero-banner",
+    "embed",
+    "cards",
+    "cards",
+    "cards-feature"
+  ]
+}

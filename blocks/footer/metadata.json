@@ -1,0 +1,23 @@
+{
+  "variantName": "footer",
+  "baseBlock": "footer",
+  "canonicalModel": "configuration",
+  "visualCharacteristics": {
+    "colorScheme": "mixed",
+    "complexity": "simple",
+    "density": "moderate",
+    "purpose": "Global site footer loaded from the /footer fragment: brand/contact column, link-list columns, legal row"
+  },
+  "contentPattern": {
+    "structure": "footer fragment document; sections = brand + contact, link columns (heading + list), copyright + legal links"
+  },
+  "usage": {
+    "pagesUsing": [],
+    "reuseCount": 0,
+    "lastUsed": null
+  },
+  "options": [],
+  "memberVariantIds": [
+    "footer-global"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "structure": "full-width horizontal banner, content left, CTA right",
+    "columns": 2,
+    "imageTreatment": "decorative background image behind content",
+    "density": "compact single row",
+    "colorScheme": "light (default) or dark via option",
+    "purpose": "Promotional banner (subscription offer, rewards) with heading, short copy and a single call to action over a decorative background image"
+  },
+  "contentPattern": {
+    "structure": "1 row: cell 1 = decorative background image (optional); cell 2 = heading, paragraph(s), CTA link (link in its own paragraph renders on the right)"
+  },
+  "usage": {
+    "pagesUsing": [
+      "/index",
+      "/en/index"
+    ],
+    "reuseCount": 3,
+    "lastUsed": "2026-10-08T00:29:55.794981Z"
+  },
+  "options": [
+    {
+      "class": "dark",
+      "label": "Dark"
+    }
+  ],
+  "memberVariantIds": [
+    "v_d5813753f050"
+  ]
+}

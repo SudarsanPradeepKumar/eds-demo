@@ -1,0 +1,39 @@
+{
+  "variantName": "hero",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "hasBackgroundImage": false,
+    "hasGrid": false,
+    "imagePattern": "large",
+    "structure": "heading + 2 CTAs + image",
+    "purpose": "Large promotional banner with eyebrow, heading, CTA and image"
+  },
+  "contentPattern": {
+    "structure": "one row; image cell plus content cell with eyebrow, heading, text and CTA(s)"
+  },
+  "usage": {
+    "pagesUsing": [
+      "/index",
+      "/subscription",
+      "/sustainability",
+      "/en/index",
+      "/coffee"
+    ],
+    "reuseCount": 5,
+    "lastUsed": "2026-10-08T01:20:30.740205Z"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_30c5c99cf72c",
+    "v_7dbdc853e656",
+    "v_1c912e3739d4",
+    "v_66d9c8203a8a",
+    "v_7dbdc853e656-3",
+    "v_3052adf39fc0",
+    "v_5c10d0024c39",
+    "v_7dbdc853e656-4"
+  ]
+}

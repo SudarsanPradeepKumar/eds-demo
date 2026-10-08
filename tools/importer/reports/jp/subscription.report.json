@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/jp/subscription",
+  "path": "jp/subscription",
+  "timestamp": "2026-10-08T01:09:53.964Z",
+  "title": "予約",
+  "template": "landing-page",
+  "blocks": [
+    "hero",
+    "cards-numbered"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/en/",
+  "path": "en/index",
+  "timestamp": "2026-10-08T01:08:54.793Z",
+  "title": "Frescopa - Coffee, Tea & Accessories",
+  "template": "landing-page",
+  "blocks": [
+    "hero",
+    "hero-banner",
+    "hero-banner",
+    "embed",
+    "cards",
+    "cards",
+    "cards-feature"
+  ]
+}

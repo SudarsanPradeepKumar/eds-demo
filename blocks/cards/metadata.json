@@ -1,0 +1,31 @@
+{
+  "variantName": "cards",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "hasBackgroundImage": false,
+    "hasGrid": false,
+    "imagePattern": "large",
+    "structure": "heading + 5 images + list",
+    "purpose": "Grid of product/category cards (image + label) or link-list columns"
+  },
+  "contentPattern": {
+    "structure": "one row per card; cell 1 = image (optional), cell 2 = heading, text and/or links"
+  },
+  "usage": {
+    "pagesUsing": [
+      "/index",
+      "/en/index"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-10-08T00:29:55.794981Z"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_666cd41d3ec9",
+    "v_7c1ee69348c4",
+    "v_ad499cf71273"
+  ]
+}

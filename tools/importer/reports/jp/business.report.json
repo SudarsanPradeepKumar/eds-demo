@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/jp/business",
+  "path": "jp/business",
+  "timestamp": "2026-10-08T01:09:47.623Z",
+  "title": "事",
+  "template": "landing-page",
+  "blocks": [
+    "hero"
+  ]
+}

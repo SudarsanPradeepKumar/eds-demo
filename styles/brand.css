@@ -1,0 +1,50 @@
+/* Fréscopa brand tokens, extracted from https://frescopa.coffee/ (rem values converted to px) */
+:root {
+  /* brand palette */
+  --frescopa-color-background: #f4e9dc;
+  --frescopa-color-brand: #a33532;
+  --frescopa-color-primary: #00647d;
+  --frescopa-color-secondary: #dc6e52;
+  --frescopa-color-tertiary: #eba439;
+  --frescopa-color-text: #58181d;
+  --frescopa-color-black: #2c2c2c;
+  --frescopa-color-button-secondary: #95351d;
+
+  /* fonts */
+  --heading-font-family: baskerville, 'Baskerville Old Face', serif;
+  --body-font-family: roboto, roboto-fallback, sans-serif;
+  --condensed-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+
+  /* base colors */
+  --background-color: #fff;
+  --text-color: var(--frescopa-color-text);
+  --link-color: var(--frescopa-color-text);
+  --link-hover-color: var(--frescopa-color-text);
+  --light-color: var(--frescopa-color-background);
+  --dark-color: var(--frescopa-color-black);
+
+  /* heading sizes (source uses the same sizes at every breakpoint) */
+  --heading-size-xxl: 56px;
+  --heading-size-xl: 48px;
+  --heading-size-l: 36px;
+  --heading-size-m: 32px;
+  --heading-size-s: 24px;
+  --heading-size-xs: 20px;
+
+  /* body sizes */
+  --body-font-size-m: 18px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 14px;
+
+  /* spacing */
+  --spacing-small: 16px;
+  --spacing-medium: 24px;
+  --spacing-big: 32px;
+  --spacing-xbig: 40px;
+  --site-width: 1360px;
+  --nav-height: 70px;
+
+  /* shape */
+  --radius-button: 24px;
+  --shadow-card: 0 2px 16px 0 rgb(0 0 0 / 16%);
+}

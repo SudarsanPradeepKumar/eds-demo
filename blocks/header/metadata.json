@@ -1,0 +1,23 @@
+{
+  "variantName": "header",
+  "baseBlock": "header",
+  "canonicalModel": "configuration",
+  "visualCharacteristics": {
+    "colorScheme": "mixed",
+    "complexity": "advanced",
+    "density": "moderate",
+    "purpose": "Global site header loaded from the /nav fragment: promo bar, brand logo, primary navigation, tools (cart, search, account)"
+  },
+  "contentPattern": {
+    "structure": "nav fragment document; sections = brand, primary nav list, tools"
+  },
+  "usage": {
+    "pagesUsing": [],
+    "reuseCount": 0,
+    "lastUsed": null
+  },
+  "options": [],
+  "memberVariantIds": [
+    "header-global"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/subscription",
+  "path": "subscription",
+  "timestamp": "2026-10-08T01:09:58.900Z",
+  "title": "Subscription",
+  "template": "landing-page",
+  "blocks": [
+    "hero",
+    "cards-numbered"
+  ]
+}
