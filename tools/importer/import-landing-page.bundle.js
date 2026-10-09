@@ -87,6 +87,8 @@ var CustomImportScript = (() => {
     }
     const cells = [[bg || "", content.length ? content : ""]];
     const options = ["light", "half-height"].filter((option) => element.classList.contains(option));
+    const bgClass = [...element.classList].find((c) => c.startsWith("frescopa-background-"));
+    if (bgClass) options.push(bgClass.replace("frescopa-", ""));
     const name = options.length ? `hero (${options.join(", ")})` : "hero";
     const block = WebImporter.Blocks.createBlock(document2, { name, cells });
     element.replaceWith(block);

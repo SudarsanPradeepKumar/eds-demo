@@ -2,12 +2,12 @@
 /* global WebImporter */
 
 /**
- * Commerce PLP import (Frescopa Coffee pages).
+ * Commerce PLP import (Frescopa Coffee, Accessories and Tea pages).
  * Extract -> clear main -> rebuild sections. Product data is NOT imported:
  * product-list-page blocks carry only their catalog configuration and load
  * products at runtime from the Commerce catalog API.
  *
- * Template: migration-work/commerce-templates.json ("PLP Template").
+ * Templates: migration-work/commerce-templates.json ("PLP Template", "PLP Category Template").
  */
 import heroParser from './parsers/hero.js';
 import embedParser from './parsers/embed.js';
@@ -16,18 +16,16 @@ import frescopaDmImagesTransformer from './transformers/frescopa-dm-images.js';
 
 const PLP_TEMPLATE = {
   name: 'PLP Template',
-  urls: [
-    'https://frescopa.coffee/coffee',
-    'https://frescopa.coffee/en/coffee',
-    'https://frescopa.coffee/es/coffee',
-    'https://frescopa.coffee/fr/coffee',
-    'https://frescopa.coffee/jp/coffee',
-  ],
-  // one entry per product grid, in page order (same on every locale)
-  productLists: [
-    { urlPath: 'bagged-coffee', category: '27' },
-    { urlPath: 'coffee-pods', category: '23' },
-  ],
+  // product grids per page slug (last path segment), in page order;
+  // values match the source catalog configuration on every locale
+  productLists: {
+    coffee: [
+      { urlPath: 'bagged-coffee', category: '27' },
+      { urlPath: 'coffee-pods', category: '23' },
+    ],
+    accessories: [{ urlPath: 'accessories', category: '28' }],
+    tea: [{ urlPath: 'tea', category: '30' }],
+  },
 };
 
 const PLP_SECTION = 'main > div.section.product-list-page-custom-container';
@@ -79,6 +77,9 @@ export default {
     const { document, url, params } = payload;
     const main = document.body;
     const ctx = { document, url, params };
+    const slug = new URL(params.originalURL || url).pathname.replace(/\/+$/, '').split('/').pop();
+    const productLists = PLP_TEMPLATE.productLists[slug] || [];
+    if (!productLists.length) console.warn(`commerce-import: no product list config for "${slug}"`);
 
     executeTransformers('beforeTransform', main, payload);
 
@@ -95,7 +96,7 @@ export default {
         if (wrapper.matches('.default-content-wrapper')) {
           productArea.push(...[...wrapper.children].filter((el) => el.textContent.trim() || el.querySelector('img, picture')));
         } else if (wrapper.matches('.product-list-page-custom-wrapper')) {
-          const config = PLP_TEMPLATE.productLists[listIndex];
+          const config = productLists[listIndex];
           listIndex += 1;
           if (config) productArea.push(productListBlock(document, config));
           else console.warn('commerce-import: more product grids than configured');

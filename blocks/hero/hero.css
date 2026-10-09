@@ -140,3 +140,28 @@ main .hero a.button:any-link {
 .hero.half-height {
   min-height: 200px;
 }
+
+/* solid brand background options (source teasers without an image) */
+.hero.background-black {
+  background-color: var(--frescopa-color-black);
+}
+
+.hero.background-yellow {
+  background-color: var(--frescopa-color-tertiary);
+}
+
+.hero.background-red {
+  background-color: var(--frescopa-color-brand);
+}
+
+.hero.background-blue {
+  background-color: var(--frescopa-color-primary);
+}
+
+.hero.background-beige {
+  background-color: var(--frescopa-color-background);
+}
+
+.hero.no-image:is(.background-black, .background-yellow, .background-red, .background-blue) .hero-eyebrow {
+  color: #fff;
+}

@@ -247,7 +247,12 @@
         "https://frescopa.coffee/fr/accessories",
         "https://frescopa.coffee/fr/tea",
         "https://frescopa.coffee/jp/accessories",
-        "https://frescopa.coffee/jp/tea"
+        "https://frescopa.coffee/jp/tea",
+        "https://frescopa.coffee/coffee",
+        "https://frescopa.coffee/en/coffee",
+        "https://frescopa.coffee/es/coffee",
+        "https://frescopa.coffee/fr/coffee",
+        "https://frescopa.coffee/jp/coffee"
       ],
       "coverageGaps": [],
       "description": "Teaser hero banner followed by a multi-column product grid listing",

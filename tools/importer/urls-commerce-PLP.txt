@@ -3,3 +3,11 @@ https://frescopa.coffee/en/coffee
 https://frescopa.coffee/es/coffee
 https://frescopa.coffee/fr/coffee
 https://frescopa.coffee/jp/coffee
+https://frescopa.coffee/accessories
+https://frescopa.coffee/en/tea
+https://frescopa.coffee/es/accessories
+https://frescopa.coffee/es/tea
+https://frescopa.coffee/fr/accessories
+https://frescopa.coffee/fr/tea
+https://frescopa.coffee/jp/accessories
+https://frescopa.coffee/jp/tea

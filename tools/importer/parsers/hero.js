@@ -72,6 +72,9 @@ export default function parse(element, { document }) {
   const cells = [[bg || '', content.length ? content : '']];
   // teaser variants that carry over as block options
   const options = ['light', 'half-height'].filter((option) => element.classList.contains(option));
+  // solid brand background (used when the teaser has no image), e.g. frescopa-background-black
+  const bgClass = [...element.classList].find((c) => c.startsWith('frescopa-background-'));
+  if (bgClass) options.push(bgClass.replace('frescopa-', ''));
   const name = options.length ? `hero (${options.join(', ')})` : 'hero';
   const block = WebImporter.Blocks.createBlock(document, { name, cells });
   element.replaceWith(block);
