@@ -278,7 +278,87 @@
       ],
       "coverageGaps": [],
       "description": "Teaser header followed by a content or product grid, embedded adaptive form section and sticky call-to-action bar",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": [
+            ".teaser-container .teaser.block"
+          ]
+        },
+        {
+          "name": "product-list-page",
+          "instances": [
+            ".product-list-page-custom.block"
+          ]
+        },
+        {
+          "name": "adaptive-form",
+          "instances": [
+            ".form-container .form.block",
+            ".embed-adaptive-form.block"
+          ]
+        },
+        {
+          "name": "sticky-cta",
+          "instances": [
+            ".sticky-cta.block"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "1",
+          "name": "section-1",
+          "selector": [
+            "main > div.section:nth-of-type(1)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "2",
+          "name": "section-2",
+          "selector": [
+            "main > div.section:nth-of-type(2)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "3",
+          "name": "section-3",
+          "selector": [
+            "main > div.section:nth-of-type(3)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "4",
+          "name": "section-4",
+          "selector": [
+            "main > div.section:nth-of-type(4)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "5",
+          "name": "section-5",
+          "selector": [
+            "main > div.section:nth-of-type(5)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        }
+      ]
     },
     {
       "name": "article-fragment",

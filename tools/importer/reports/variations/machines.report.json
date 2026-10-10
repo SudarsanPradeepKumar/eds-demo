@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/variations/machines",
+  "path": "variations/machines",
+  "timestamp": "2026-10-10T00:01:33.861Z",
+  "title": "Machines",
+  "template": "teaser-form-page",
+  "blocks": [
+    "hero",
+    "product-list-page",
+    "adaptive-form",
+    "sticky-cta"
+  ]
+}

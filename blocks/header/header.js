@@ -3,12 +3,33 @@ const isDesktop = window.matchMedia('(min-width: 900px)');
 
 const SECTION_NAMES = ['announcements', 'brand', 'sections', 'tools'];
 
+// site languages that have their own nav fragment
+const LOCALES = ['es', 'fr', 'jp'];
+
+/**
+ * Returns the page's language folder (e.g. 'es'), or '' for the default site.
+ * Local preview serves pages under /content, so that prefix is ignored.
+ * @returns {string}
+ */
+function getLocale() {
+  const parts = window.location.pathname.split('/').filter(Boolean);
+  if (parts[0] === 'content') parts.shift();
+  return LOCALES.includes(parts[0]) ? parts[0] : '';
+}
+
 /**
  * Fetches the nav fragment. Local preview serves it under /content,
  * DA/EDS serves it from the site root.
  * @returns {Promise<{html: string, base: string}|null>}
  */
 async function fetchNav() {
+  // localized nav first (e.g. /es/...), then the default nav
+  const locale = getLocale();
+  if (locale) {
+    let localized = await fetch(`/content/${locale}/nav.plain.html`);
+    if (!localized.ok) localized = await fetch(`/${locale}/nav.plain.html`);
+    if (localized.ok) return { html: await localized.text(), base: localized.url };
+  }
   let resp = await fetch('/content/nav.plain.html');
   if (!resp.ok) resp = await fetch('/nav.plain.html');
   if (!resp.ok) return null;

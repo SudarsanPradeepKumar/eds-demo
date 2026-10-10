@@ -1,0 +1,32 @@
+.sticky-cta {
+  position: fixed;
+  bottom: 5%;
+  left: 50px;
+  z-index: 1000;
+}
+
+main .sticky-cta a.sticky-cta-link:any-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 24px;
+  background: var(--frescopa-color-primary);
+  color: #ffbb63;
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 0;
+}
+
+main .sticky-cta a.sticky-cta-link:hover {
+  background: var(--frescopa-color-primary);
+  color: #ffbb63;
+}
+
+.sticky-cta img {
+  width: 28px;
+  height: 28px;
+}

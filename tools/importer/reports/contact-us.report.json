@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/contact-us",
+  "path": "contact-us",
+  "timestamp": "2026-10-10T00:01:40.857Z",
+  "title": "Contact Us - Frescopa",
+  "template": "teaser-form-page",
+  "blocks": [
+    "hero",
+    "hero",
+    "adaptive-form"
+  ]
+}
