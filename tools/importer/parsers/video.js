@@ -12,14 +12,45 @@
  *   .dm-video-iframe-wrap > iframe.dm-video-iframe[src] (Dynamic Media /play URL)
  * Fallbacks: any iframe[src], video[src] / video > source[src], a[href].
  */
-export default function parse(element, { document }) {
+/**
+ * Authored video links from the page's source document (<page>.plain.html).
+ * The source `video` block renders a video.js player whose DOM no longer holds
+ * the authored player URL, so it is read from the document instead.
+ */
+function readSourceVideoLinks(pageUrl) {
+  try {
+    const { origin, pathname } = new URL(pageUrl);
+    const docPath = pathname.endsWith('/') ? `${pathname}index` : pathname.replace(/\.html?$/, '');
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `${origin}${docPath}.plain.html`, false); // sync: parsers are synchronous
+    xhr.send();
+    if (xhr.status !== 200) return [];
+    const doc = new DOMParser().parseFromString(xhr.responseText, 'text/html');
+    return [...doc.querySelectorAll('div.video')].map((v) => v.querySelector('a[href]'))
+      .map((a) => (a ? a.getAttribute('href') : null));
+  } catch (e) {
+    return [];
+  }
+}
+
+export default function parse(element, { document, url: pageUrlArg, params }) {
   const iframe = element.querySelector('iframe.dm-video-iframe[src], iframe[src]');
   const video = element.querySelector('video');
   const videoSource = video && (video.getAttribute('src')
     || (video.querySelector('source[src]') && video.querySelector('source[src]').getAttribute('src')));
   const anchor = element.querySelector('a[href]');
 
-  const url = (iframe && iframe.getAttribute('src'))
+  // source `video` blocks: the authored link (e.g. a Dynamic Media /play URL) wins
+  let authored = null;
+  if (element.classList.contains('video')) {
+    const links = readSourceVideoLinks((params && params.originalURL) || pageUrlArg);
+    // earlier video blocks were already replaced, so the remaining count gives our index
+    const remaining = document.querySelectorAll('.video.block').length;
+    authored = links[links.length - remaining] || null;
+  }
+
+  const url = authored
+    || (iframe && iframe.getAttribute('src'))
     || videoSource
     || (anchor && anchor.getAttribute('href'));
 

@@ -15,6 +15,7 @@ const PRODUCT_LISTS = {
   accessories: [{ urlPath: 'accessories', category: '28' }],
   tea: [{ urlPath: 'tea', category: '30' }],
   machines: [{ urlPath: 'coffee-machines', category: '29' }],
+  products: [{ urlPath: 'products', category: '28' }],
 };
 
 export default function parse(element, { document, url, params }) {
@@ -22,7 +23,7 @@ export default function parse(element, { document, url, params }) {
   const slug = new URL(pageUrl).pathname.replace(/\/+$/, '').split('/').pop();
   const configs = PRODUCT_LISTS[slug] || [];
   // earlier grids on the page have already been replaced, so the remaining count gives our index
-  const remaining = document.querySelectorAll('.product-list-page-custom.block').length;
+  const remaining = document.querySelectorAll('.product-list-page-custom.block, .product-list-page.block').length;
   const config = configs[configs.length - remaining];
   if (!config) {
     console.warn(`product-list-page: no catalog config for "${slug}"`);

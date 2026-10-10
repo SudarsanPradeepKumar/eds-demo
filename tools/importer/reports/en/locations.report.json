@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/en/locations",
+  "path": "en/locations",
+  "timestamp": "2026-10-10T00:21:57.915Z",
+  "title": "Locations",
+  "template": "simple-content-page",
+  "blocks": [
+    "embed"
+  ]
+}

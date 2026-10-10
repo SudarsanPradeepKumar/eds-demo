@@ -231,11 +231,81 @@
         "https://frescopa.coffee/fr/locations",
         "https://frescopa.coffee/fr/products",
         "https://frescopa.coffee/jp/locations",
-        "https://frescopa.coffee/jp/products"
+        "https://frescopa.coffee/jp/products",
+        "https://frescopa.coffee/es/sustainability",
+        "https://frescopa.coffee/fr/sustainability",
+        "https://frescopa.coffee/jp/sustainability"
       ],
       "coverageGaps": [],
-      "description": "Single-section page of default content (headings, paragraphs, lists) or an app shell that renders its main content client-side",
-      "blocks": []
+      "description": "Simple pages: default content, optionally a teaser, store locator, product grid or inline video",
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": [
+            ".teaser-container .teaser.block"
+          ]
+        },
+        {
+          "name": "embed",
+          "instances": [
+            ".store-locator.block"
+          ]
+        },
+        {
+          "name": "product-list-page",
+          "instances": [
+            ".product-list-page.block"
+          ]
+        },
+        {
+          "name": "video",
+          "instances": [
+            ".video.block"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "1",
+          "name": "section-1",
+          "selector": [
+            "main > div.section:nth-of-type(1)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "2",
+          "name": "section-2",
+          "selector": [
+            "main > div.section:nth-of-type(2)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "3",
+          "name": "section-3",
+          "selector": [
+            "main > div.section:nth-of-type(3)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "4",
+          "name": "section-4",
+          "selector": [
+            "main > div.section:nth-of-type(4)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        }
+      ]
     },
     {
       "name": "product-listing",
@@ -266,13 +336,10 @@
         "https://frescopa.coffee/en/machines",
         "https://frescopa.coffee/es/contact-us",
         "https://frescopa.coffee/es/machines",
-        "https://frescopa.coffee/es/sustainability",
         "https://frescopa.coffee/fr/contact-us",
         "https://frescopa.coffee/fr/machines",
-        "https://frescopa.coffee/fr/sustainability",
         "https://frescopa.coffee/jp/contact-us",
         "https://frescopa.coffee/jp/machines",
-        "https://frescopa.coffee/jp/sustainability",
         "https://frescopa.coffee/machines",
         "https://frescopa.coffee/variations/machines"
       ],

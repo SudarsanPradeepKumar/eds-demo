@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/fr/sustainability",
+  "path": "fr/sustainability",
+  "timestamp": "2026-10-10T00:22:49.660Z",
+  "title": "Durabilité",
+  "template": "simple-content-page",
+  "blocks": [
+    "hero",
+    "video"
+  ]
+}

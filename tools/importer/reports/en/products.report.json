@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://frescopa.coffee/en/products",
+  "path": "en/products",
+  "timestamp": "2026-10-10T00:22:22.259Z",
+  "title": "Products",
+  "template": "simple-content-page",
+  "blocks": [
+    "product-list-page"
+  ]
+}
