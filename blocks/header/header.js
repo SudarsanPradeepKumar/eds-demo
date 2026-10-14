@@ -164,10 +164,14 @@ function decorateTools(navTools) {
   const tools = document.createElement('div');
   tools.className = 'nav-tools-list';
   [...list.querySelectorAll(':scope > li')].forEach((li) => {
-    const link = li.querySelector(':scope > a');
+    // DA wraps list item content in a paragraph (<li><p><a>); local fragments may not
+    const link = li.querySelector(':scope > a, :scope > p > a');
     if (!link) return;
     const img = link.querySelector('img');
-    const label = img ? img.alt : link.textContent.trim();
+    // icon links are named by alt text, falling back to the link title or URL (e.g. /cart)
+    const label = img
+      ? (img.alt || link.title || new URL(link.href).pathname.split('/').filter(Boolean).pop() || '')
+      : link.textContent.trim();
     const slug = slugify(label);
     const subList = li.querySelector(':scope > ul');
     const wrapper = document.createElement('div');

@@ -46,17 +46,17 @@ footer .footer p {
   letter-spacing: 0;
 }
 
-footer .footer p:first-child:has(> a > img) {
+footer .footer p:first-child:has(img) {
   width: 200px;
   margin-bottom: 0;
 }
 
-footer .footer p > a > img {
+footer .footer p img {
   width: 150px;
   height: auto;
 }
 
-footer .footer p > a:has(> img):hover {
+footer .footer p > a:has(img):hover {
   text-decoration-color: transparent;
 }
 
@@ -118,7 +118,7 @@ footer .footer .section:last-child > .default-content-wrapper {
     flex: 1;
   }
 
-  footer .footer p > a > img {
+  footer .footer p img {
     width: 200px;
   }
 }
